@@ -1,0 +1,148 @@
+@import "globals";
+
+body {
+    background-color: $clr-neutral-bg;
+    color: $clr-white;
+    font-size: 0.9375rem;
+    font-family: "Outfit", sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: $clr-neutral-card;
+    width: 326px;
+    height: 542px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 23px;
+
+    &_pic {
+        width: 278px;
+        height: 280px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 25px;
+        position: relative;
+        cursor: pointer;
+
+        .overlay {
+            position: absolute;
+            background-color: rgba(0, 255, 247, 0.5);
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+
+            img {
+                width: 50px;
+            }
+        }
+
+        &:hover .overlay {
+            opacity: 1;
+        }
+    }
+
+    &_body {
+        h2 {
+            font-size: 21px;
+            margin-bottom: 15px;
+
+            &:hover {
+                color: $clr-primary-cyan;
+                cursor: pointer;
+            }
+        }
+
+        p {
+            color: $clr-primary-blue;
+            line-height: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        &_sub {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left {
+            p {
+                display: flex;
+                width: 180px;
+                color: $clr-primary-cyan;
+
+                &::before {
+                    content: url(../images/icon-ethereum.svg);
+                    padding-right: 6px;
+                    padding-top: 2px;
+                }
+            }
+        }
+
+        .right {
+            p {
+                display: flex;
+                width: 180px;
+
+                &::before {
+                    content: url(../images/icon-clock.svg);
+                    padding-right: 6px;
+                    padding-top: 3px;
+                }
+            }
+        }
+
+        .separator {
+            display: block;
+            height: 2px;
+            background-color: $clr-neutral-line;
+        }
+
+        &_author {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            img {
+                width: 30px;
+                border: 1px solid $clr-white;
+                border-radius: 50%;
+            }
+            p {
+                margin-bottom: 0px;
+                margin-left: 15px;
+
+                span {
+                    color: $clr-white;
+
+                    &:hover {
+                        color: $clr-primary-cyan;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.attribution {
+    font-size: 0.7rem;
+    color: $clr-primary-cyan;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    a {
+        color: $clr-white;
+    }
+}

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+// Primary
+
+$clr-primary-blue: hsl(215, 51%, 70%);
+$clr-primary-cyan: hsl(178, 100%, 50%);
+
+// Neutral
+
+$clr-neutral-bg: hsl(217, 54%, 11%);
+$clr-neutral-card: hsl(216, 50%, 16%);
+$clr-neutral-line: hsl(215, 32%, 27%);
+$clr-white: hsl(0, 0%, 100%);
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
